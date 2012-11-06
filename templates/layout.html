@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>yuwenlan</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/bootstrap.css") }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/base.css") }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/layout.css") }}">
+  <script type="text/javascript" src="{{ url_for("static", filename="js/jquery-1.8.2.min.js") }}"></script>
+  <script type="text/javascript" src="{{ url_for("static", filename="js/bootstrap.js") }}"></script>
+</head>
+<body>
+
+<!-- header -->
+<div class="header">
+  <div class="y_navbar clearfix">
+    <h2 class="fl">yuwenlan</h2>
+    {% if not session.id %}
+      <div class="sign fr"><a href="/whatsup">登陆</a> | <a href="/welcome">注册</a></div>
+    {% else %}
+      <div class="sign fr"><a href="{{ url_for("partner.index", username=session.username) }}">{{ session.username }}</a>&nbsp;|&nbsp;<a href="/bye/">退出</a></div>
+    {% endif %}
+    <ul class="y_nav">
+      <li {% if menu == "utopia" %} class="active" {% endif %} > <a href="./components.html">乌托邦</a> </li>
+      <li {% if menu == "happy"  %} class="active" {% endif %} > <a href="./base-css.html">娱乐</a> </li>
+      <li {% if menu == "yummy"  %} class="active" {% endif %} > <a href="./scaffolding.html">吃货</a> </li>
+      <li {% if menu == "dress"  %} class="active" {% endif %} > <a href="./getting-started.html">打扮</a> </li>
+      <li {% if not menu %} class="active" {% endif %} > <a href="/">首页</a> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container flearfix">
+{% block content %}
+{% endblock %}
+</div>
+
+<div class="footer clearfix">
+  <div class="nav">
+    Copyright &#169; yuwenlan
+  </div>
+</div>
+</body>
+</html>

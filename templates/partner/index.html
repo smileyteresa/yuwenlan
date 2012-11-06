@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="span9" style="">
+    <div class="row">
+      <div class="span9">
+        <div class="tabbable" style="margin-bottom: 18px;">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">聊聊</a></li>
+            <li class=""><a href="#tab2" data-toggle="tab">玩意</a></li>
+            <li class=""><a href="#tab3" data-toggle="tab">话题</a></li>
+          </ul>
+          <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+            <div class="tab-pane active" id="tab1">
+              <div>
+                随便说点什么
+              </div>
+              <form action="/partner/talk/" method="POST">
+                <textarea class="sayhello"></textarea>
+                <input class="btn" type="submit" value="发表">
+              </form>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <p>Howdy, I'm in Section 2.</p>
+            </div>
+            <div class="tab-pane" id="tab3">
+              <p>What up girl, this is Section 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="span3" style="background:blue">
+    bb
+  </div>
+</div>
+
+{% endblock %}
+

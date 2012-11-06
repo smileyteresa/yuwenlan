@@ -1,0 +1,33 @@
+/* header area */
+.header, .header>  h2, li, .sign {
+  border: 1px solid #CCCCCC;
+  height: 40px;
+  line-height: 40px;
+}
+.header {
+  width: 100%;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 20px;
+}
+.header > .y_navbar {
+  width: 960px;
+  margin: 0 auto;
+}
+.y_navbar > h2 {
+  height: 40px;
+  padding-right: 10px;
+  border: 1px solid #CCCCCC;
+  border-width: 0px 1px 0px 0px;
+}
+.y_nav > li {
+  float: right;
+  border: 1px solid #CCCCCC;
+  border-width: 0px 0px 0px 1px;
+  height: 40px;
+  padding: 0px 20px 0px 20px;
+}
+.y_navbar > .sign {
+  border: 1px solid #CCCCCC;
+  border-width: 0px 0px 0px 1px;
+  padding-left: 20px;
+}

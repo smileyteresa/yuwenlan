@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+<style type="text/css">
+  .sign_c {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .s_header {
+    width: 500px;
+  }
+  .form {
+    color: #7F7F7F;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 15px;
+    width: 382;
+  }
+  .s_box {
+    margin-top:10px;
+    width: 500px;
+  }
+  .s_box_top {
+    height: 4px;
+    width: 500px;
+    background: url("/static/img/sb_top.gif");
+  }
+  .s_box_middle {
+    padding: 32px 59px 18px 59px;
+    width: 382px;
+    background: url("/static/img/sb_com.gif");
+  }
+  .s_box_bottom {
+    width: 500px;
+    height: 4px;
+    background: url("/static/img/sb_bottom.gif");
+  }
+  .p {
+    margin: 8px 0px 4px 0px;
+    width: 382px;
+  }
+  .s_box_sub {
+    margin-top: 18px;
+  }
+  .find {
+    margin-top: 12px;
+    width: 103px;
+  }
+  .y_input {/*input*/
+    width: 380px;
+  }
+</style>
+<div class="sign_c">
+  <div class="s_header">
+    <h1>&nbsp;</h1>
+  </div>
+  <div class="s_box">
+    <div class="s_box_top">
+    </div>
+    <div class="s_box_middle">
+      <div class="form">
+        <form method="post" action="/whatsup/">
+          <p class="p">邮箱</p>
+          <input type="email" class="y_input" name="email"/>
+          <p name="pass" class="p">密码</p>
+          <input type="password" class="y_input" name="password" />
+          <div class="s_box_sub clearfix">
+            <span class="find fl">忘记密码&nbsp;|&nbsp;<a href="/welcome/">注册</a></span>
+            <div class="fr" style="line-height:40px">
+              <input type="checkbox" class="fl" style="margin:14px 5px 0 0" name="remember" />记住我
+              <input class="btn" type="submit" style="margin-left:10px;" value="登陆" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="s_box_bottom">
+    </div>
+  </div>
+</div>
+{% endblock %}

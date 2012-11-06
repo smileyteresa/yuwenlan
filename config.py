@@ -1,0 +1,1 @@
+Mysql_Uri = 'mysql://root:good123@127.0.0.1/yuwenlan?charset=utf8'
