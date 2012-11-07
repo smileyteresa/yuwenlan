@@ -6,8 +6,8 @@ from database import db
 
 ywl = Blueprint('partner', __name__, template_folder = 'templates')
 
-@require_login
 @ywl.route('/<username>/')
+@require_login
 def index(username):
     return render_template('partner/index.html', menu = 'home')
 
@@ -15,8 +15,8 @@ def index(username):
 def modify(username):
     return username
 
-@require_login
 @ywl.route('/talk/')
+@require_login
 def talk():
     if None in request.form.items():
         return '请填写内容'
